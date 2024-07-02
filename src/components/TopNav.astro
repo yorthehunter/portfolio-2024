@@ -1,0 +1,73 @@
+---
+import LinkButton from './LinkButton.astro';
+import BrianCleveland from "../assets/images/brian-cleveland-simpsonized.svg?raw"; 
+---
+
+<nav>
+  <a href="#" class="logo">
+    <Fragment set:html={BrianCleveland} />
+    <span>Brian Cleveland</span>
+  </a>
+  <ul>
+    <li>
+      <LinkButton href="#" label="Accomplishments" />
+    </li>
+    <li>
+      <LinkButton href="#" label="Work" />
+    </li>
+    <li>
+      <LinkButton href="#" label="About" />
+    </li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  .logo {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2xs);
+
+    :global(svg) {
+      @media screen and (max-width: 380px) {
+        height: 2.5rem;
+        width: auto;
+      }
+    }
+
+    span {
+      font: var(--font-heading-6);
+
+      @media screen and (max-width: 380px) {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    padding: var(--space-2xs) var(--space-s);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-s);
+
+      li {
+        display: flex;
+      }
+    }  
+  }
+</style>

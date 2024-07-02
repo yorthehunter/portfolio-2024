@@ -1,16 +1,20 @@
 ---
+import '@fontsource-variable/montserrat';
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
 ---
+
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Explore the portfolio of a seasoned product designer with 14 years of expertise in design systems and leadership, showcasing innovative and impactful work." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -28,24 +32,64 @@ const { title } = Astro.props;
 		--color-bg: #fff;
 		--color-bg-soften: #ddd;
 		--color-bg-overlay: rgba(41,41,41,0.1);
+		
+		--font-family: 'Montserrat Variable', sans-serif;
+		--font-heading-weight: 800;
+		--font-body-weight: 400;
+		--font-step--1: clamp(0.8333rem, 0.7318rem + 0.5077vi, 1.1253rem);
+		--font-step-0: clamp(1rem, 0.8261rem + 0.8696vi, 1.5rem);
+		--font-step-1: clamp(1.2rem, 0.9219rem + 1.3904vi, 1.9995rem);
+		--font-step-2: clamp(1.44rem, 1.0138rem + 2.131vi, 2.6653rem);
+		--font-step-3: clamp(1.728rem, 1.0933rem + 3.1737vi, 3.5529rem);
+		--font-step-4: clamp(2.0736rem, 1.1475rem + 4.6303vi, 4.736rem);
+		--font-heading-1: var(--font-heading-weight) var(--font-step-4) var(--font-family);
+		--font-heading-2: var(--font-heading-weight) var(--font-step-3) var(--font-family);
+		--font-heading-3: var(--font-heading-weight) var(--font-step-2) var(--font-family);
+		--font-heading-4: var(--font-heading-weight) var(--font-step-1) var(--font-family);
+		--font-heading-5: var(--font-heading-weight) var(--font-step-0) var(--font-family);
+		--font-heading-6: var(--font-heading-weight) var(--font-step--1) var(--font-family);
+		--font-body-1: var(--font-body-weight) var(--font-step-2) var(--font-family);
+		--font-body-2: var(--font-body-weight) var(--font-step-1) var(--font-family);
+		--font-body-3: var(--font-body-weight) var(--font-step-0) var(--font-family);
+		--font-body-4: var(--font-body-weight) var(--font-step--1) var(--font-family);
 
-
-
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--space-3xs: clamp(0.25rem, 0.2065rem + 0.2174vi, 0.375rem);
+		--space-2xs: clamp(0.5rem, 0.413rem + 0.4348vi, 0.75rem);
+		--space-xs: clamp(0.75rem, 0.6196rem + 0.6522vi, 1.125rem);
+		--space-s: clamp(1rem, 0.8261rem + 0.8696vi, 1.5rem);
+		--space-m: clamp(1.5rem, 1.2391rem + 1.3043vi, 2.25rem);
+		--space-l: clamp(2rem, 1.6522rem + 1.7391vi, 3rem);
+		--space-xl: clamp(3rem, 2.4783rem + 2.6087vi, 4.5rem);
+		--space-2xl: clamp(4rem, 3.3043rem + 3.4783vi, 6rem);
+		--space-3xl: clamp(6rem, 4.9565rem + 5.2174vi, 9rem);
+	}
+	* {
+		margin: 0;
+		padding: 0;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: var(--font-family);
+		font-size: 16px;
+		background-image: linear-gradient(180deg, var(--color-bg-soften) 0%, var(--color-bg) 32%);
 	}
+	body {
+		background-image: url("data:image/svg+xml, %3Csvg%20width%3D%223066%22%20height%3D%22862%22%20viewBox%3D%220%200%203066%20862%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20clip-path%3D%22url(%23clip0_622_867)%22%3E%0A%3Cg%20filter%3D%22url(%23filter0_f_622_867)%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M540.878%2014.5612L-32.6703%2096.3347L-37.3281%2063.6651L539.726%20-18.6083L540.878%2014.5612ZM542.422%2059.0074L-37.3281%20141.665L-32.6703%20174.335L543.574%2092.1768L542.422%2059.0074ZM742.593%2063.8017L741.441%2030.6322L2999.67%20-291.335L3004.33%20-258.665L742.593%2063.8017ZM545.117%20136.623L-37.3281%20219.665L-32.6703%20252.335L546.269%20169.793L545.117%20136.623ZM745.288%20141.417L744.136%20108.248L1958.12%20-64.8358L1959.27%20-31.6663L745.288%20141.417ZM2065.22%20-46.7715L2064.07%20-79.941L2999.67%20-213.335L3004.33%20-180.665L2065.22%20-46.7715ZM746.832%20185.864L1960.82%2012.7799L1961.97%2045.9494L747.984%20219.033L746.832%20185.864ZM2066.76%20-2.32529L2067.91%2030.8442L2757.98%20-67.5422L2757.13%20-92.2186L2987.07%20-100.204L3004.33%20-102.665L2999.67%20-135.335L2066.76%20-2.32529ZM2773%20364.982L2774.15%20398.152L2084.09%20496.538L2082.93%20463.369L2773%20364.982ZM2770.31%20287.367L2771.46%20320.536L2081.39%20418.923L2080.24%20385.753L2770.31%20287.367ZM2767.61%20209.751L2768.76%20242.921L2078.7%20341.307L2077.54%20308.138L2767.61%20209.751ZM2764.92%20132.135L2766.07%20165.305L2076%20263.691L2074.85%20230.522L2764.92%20132.135ZM2762.22%2054.5197L2763.37%2087.6891L2073.3%20186.076L2072.15%20152.906L2762.22%2054.5197ZM2759.53%20-23.096L2760.68%2010.0735L2070.61%20108.46L2069.46%2075.2904L2759.53%20-23.096ZM749.527%20263.479L1963.51%2090.3956L1964.66%20123.565L750.679%20296.649L749.527%20263.479ZM752.222%20341.095L1966.21%20168.011L1967.36%20201.181L753.374%20374.264L752.222%20341.095ZM754.918%20418.711L1968.9%20245.627L1970.05%20278.796L756.07%20451.88L754.918%20418.711ZM757.613%20496.326L1971.6%20323.243L1972.75%20356.412L758.765%20529.496L757.613%20496.326ZM760.309%20573.942L1974.29%20400.858L1975.45%20434.028L761.461%20607.112L760.309%20573.942ZM763.004%20651.558L1976.99%20478.474L1978.14%20511.644L764.156%20684.727L763.004%20651.558ZM547.812%20214.239L-37.3281%20297.665L-32.6703%20330.335L548.964%20247.408L547.812%20214.239ZM550.508%20291.854L-37.3281%20375.665L-32.6703%20408.335L551.66%20325.024L550.508%20291.854ZM553.203%20369.47L-37.3281%20453.665L-32.6703%20486.335L554.355%20402.64L553.203%20369.47ZM555.899%20447.086L-37.3281%20531.665L-32.6703%20564.335L557.051%20480.255L555.899%20447.086ZM558.594%20524.702L-37.3281%20609.665L-32.6703%20642.335L559.746%20557.871L558.594%20524.702ZM561.29%20602.317L-37.3281%20687.665L-32.6703%20720.335L562.441%20635.487L561.29%20602.317ZM563.985%20679.933L-37.3281%20765.665L-32.6703%20798.335L565.137%20713.103L563.985%20679.933ZM739.897%20-13.814L738.745%20-46.9835L2999.67%20-369.335L3004.33%20-336.665L739.897%20-13.814Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3Cdefs%3E%0A%3Cfilter%20id%3D%22filter0_f_622_867%22%20x%3D%22-65.3281%22%20y%3D%22-397.335%22%20width%3D%223097.66%22%20height%3D%221223.67%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22%2F%3E%0A%3CfeGaussianBlur%20stdDeviation%3D%2214%22%20result%3D%22effect1_foregroundBlur_622_867%22%2F%3E%0A%3C%2Ffilter%3E%0A%3CclipPath%20id%3D%22clip0_622_867%22%3E%0A%3Crect%20width%3D%223066%22%20height%3D%22862%22%20fill%3D%22white%22%2F%3E%0A%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: contain;
+		color: var(--color-primary);
+	}
+
+	a:link,
+  a:visited {
+    transition: color 0.15s;
+    color: var(--color-raspberry);
+	}
+
+  a:hover {
+    color: inherit;
+  }
+
 	code {
 		font-family:
 			Menlo,
