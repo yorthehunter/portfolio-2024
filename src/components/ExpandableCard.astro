@@ -1,0 +1,71 @@
+---
+interface Props {
+	title: string;
+  id: string;
+}
+
+const { title, id } = Astro.props;
+
+
+---
+
+
+<details class="card">
+  <summary>
+    <slot name="image" />
+    <h2>{title}</h2>
+    <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.7422 13.7578L1.24219 3.25781C0.53125 2.60156 0.53125 1.45312 1.24219 0.796875C1.89844 0.0859375 3.04688 0.0859375 3.70312 0.796875L13 10.0391L22.2422 0.796875C22.8984 0.0859375 24.0469 0.0859375 24.7031 0.796875C25.4141 1.45312 25.4141 2.60156 24.7031 3.25781L14.2031 13.7578C13.5469 14.4688 12.3984 14.4688 11.7422 13.7578Z" fill="#FF2D78"/>
+    </svg>
+  </summary>
+  <div class="content">
+    <slot />
+  </div>
+</details>
+
+
+
+
+<style lang="scss">
+  .card {
+    border: 2px solid var(--color-secondary);
+    display: flex;
+    padding: var(--space-m);
+    flex-direction: column;
+    gap: var(--space-s);
+    align-items: center;
+
+    summary {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-s);
+      cursor: pointer;
+    }
+
+    h2 {
+      font: var(--font-heading-6);
+      text-align: center;
+    }
+  }
+  .content {
+    box-sizing: border-box;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 800ms ease-out;
+  }
+
+  details[open] .content {
+    max-height: 800px;
+    margin-top: var(--space-s);
+  }
+
+  svg {
+    transition: transform 0.3s;
+  }
+
+  details[open] svg {
+    transform: rotate(180deg);
+  }
+</style>

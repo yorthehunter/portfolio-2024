@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import ExpandableCard from "../components/ExpandableCard.astro";
+import stitchFixLogo from "../assets/images/logo-stitch-fix.svg";
+import AnomalieLogo from "../assets/images/logo-anomalie.svg";
+import ModernHealthLogo from "../assets/images/logo-modern-health.svg";
+import BuiltLogo from "../assets/images/logo-built.svg";
+---
+
+<ExpandableCard
+title="Helped a team of 20 grow into a $2 billion dollar styling experience at Stitch Fix"
+id="card-1"
+>
+  <Image src={stitchFixLogo} alt="Stitch Fix logo" slot="image" class="image" />
+  <ul class="accomplishment-list">
+    <li>
+      As the first design hire, helped grow the design team to 15+ product
+      designers and researchers
+    </li>
+    <li>
+      Later, as the first front-end engineer, built multiple internal UI
+      libraries for our enterprise products
+    </li>
+    <li>Created the first front-end platform design team</li>
+    <li>
+      Created and launched the Mode design system which unified the visual
+      experience of all customer-facing products
+    </li>
+    <li>
+      Led the rebranding effort, resulting in a technical solution that
+      supported two branded UIs that could be toggled on or off through the
+      design system, creating a seamless transition for users
+    </li>
+  </ul>
+</ExpandableCard>
+<ExpandableCard title="Created the first online custom wedding dress experience at Anomalie" id="card-2">
+  <Image src={AnomalieLogo} alt="Anomalie logo" slot="image" class="image" />
+  <ul class="accomplishment-list">
+    <li>As the head of design, created a unique experience, blending user-input, stylist touches, and algorithmic learning to deliver completely one-of-a-kind dresses to users</li>
+    <li>Launched new brand guidelines, which unified the visual identity for all Anomalie products</li>
+    <li>Led design-thinking sessions with product and engineering to enable everyone to build elegant products</li>
+  </ul>
+</ExpandableCard>
+<ExpandableCard title="Launched the first design system at Modern Health" id="card-3">
+  <Image src={ModernHealthLogo} alt="Modern Health logo" slot="image" class="image" />
+  <ul class="accomplishment-list">
+    <li>Designed, helped develop, and launched the Vita design system, serving all our user-facing platforms with a single-source coded UI library, documentation, and design assets</li>
+    <li>Created and led the Design System Guild, responsible for distributing information, unblocking product teams, and elevating the design and implementation of the design system</li>
+    <li>Mentored others in systems design, component composition, and usability guidelines</li>
+    <li>Built with accessibility and international language support as primary objectives</li>
+  </ul>
+</ExpandableCard>
+<ExpandableCard title="Designed UI patterns for expert-use financial systems at Built Technologies" id="card-4">
+  <Image src={BuiltLogo} alt="Built Technologies logo" slot="image" class="image" />
+  <ul class="accomplishment-list">
+    <li>Designed within a massive UI library and guided the design direction, visuals, and usage documentation for all applications at Built</li>
+    <li>Developed processes for enabling decision-making at scale, making systems changes easier and more accessible for designers and engineers</li>
+    <li>Established a contribution model and coordinated a collective approach to delivering system changes</li>
+  </ul>
+</ExpandableCard>
+
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .accomplishment-list {
+    padding-left: var(--space-s);
+    font: var(--font-body-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .image {
+    max-height: 48px;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+  }
+</style>
