@@ -1,0 +1,166 @@
+---
+import { Image } from "astro:assets";
+import LinkButton from "../components/LinkButton.astro";
+import modeDS from "../assets/images/example-mode-ds.png";
+import colorPalette from "../assets/images/example-color-palette.png";
+import homeScreen from "../assets/images/example-home-screen.png";
+import returnsProcess from "../assets/images/example-returns-process.png";
+import globalNav from "../assets/images/example-global-nav.png";
+---
+
+<p>
+  These portfolio pieces are examples of highly successful projects that have
+  driven business results but are punctuated with the challenges that digital
+  products often face, like decision paralysis, resource constraints, scope
+  change, knowledge silos, etc. It's been my privilege to partner with amazing
+  teammates to overcome these challenges.
+</p>
+<p>
+  I value documenting decisions, catering storytelling to your audience,
+  trusting partnerships between teammates, and enacting process and automation
+  at the right time.
+</p>
+
+<ul>
+  <li class="work-card">
+    <Image
+      src={modeDS}
+      alt="Screenshot of the Mode Design System from Stitch Fix"
+      class="image"
+    />
+    <section class="content">
+      <h2>Introducing the Mode Design System</h2>
+      <p>
+        Led the design of the Mode Design System, the customer-facing DS at
+        Stitch Fix. Rolled out a cross-platform UI system serving 80+ engineers
+        and enabling an entire rebrand of the customer UX.
+      </p>
+      <LinkButton newWindow label="Read on Medium" href="https://yorthehunter.medium.com/introducing-the-mode-design-system-b3a64cb916da?sk=7450450ef476290ea72991dc0c0110c8" />
+    </section>
+  </li>
+  <li class="work-card">
+    <Image
+      src={colorPalette}
+      alt="Color examples from the Vita Design System color palette"
+      class="image"
+    />
+    <section class="content">
+      <h2>Creating an Accessible, Scalable Color Palette</h2>
+      <p>
+        Reimagined the color palette for all platforms at Modern Health. Enabled
+        WCAG-compliance at scale and an evolvable color solution by means of the
+        design system, Vita.
+      </p>
+      <LinkButton newWindow label="Read on Medium" href="https://yorthehunter.medium.com/how-we-created-an-accessible-scalable-color-palette-2ae1242abdcb" />
+    </section>
+  </li>
+  <li class="work-card small">
+    <Image
+      src={returnsProcess}
+      alt="A stock image of a full loading dock"
+      class="image"
+    />
+    <section class="content">
+      <h2>Designing a Returns Process that Reflects Reality</h2>
+      <p>
+        Designed a new returns process at Stitch Fix by mapping the physical
+        space of users to a digital experience, resulting in a 25% increase in
+        productivity.
+      </p>
+      <p><em>Please Ask for Details About this Project</em></p>
+    </section>
+  </li>
+  <li class="work-card small">
+    <Image
+      src={globalNav}
+      alt="A screenshot of the spec work for the Global Navigation in the Vita Design System from Modern Health"
+      class="image"
+    />
+    <section class="content">
+      <h2>Launched Multi-platform Global Navigation</h2>
+      <p>
+        Componentized our global navigation across all platforms at Modern
+        Health, enabling global search and increasing engagement with all
+        member-facing products.
+      </p>
+      <p><em>Please Ask for Details About this Project</em></p>
+    </section>
+  </li>
+  <li class="work-card small">
+    <Image
+      src={homeScreen}
+      alt="Desktop and mobile views of the new home screen at Modern Health"
+      class="image"
+    />
+    <section class="content">
+      <h2>Launched a New, Personalized Home Screen</h2>
+      <p>
+        Reimagined a new home screen experience for members at Modern Health,
+        resulting in higher retention, higher engagement, and enablement of
+        dynamic, personalized product features at scale.
+      </p>
+      <p><em>Please Ask for Details About this Project</em></p>
+    </section>
+  </li>
+</ul>
+
+<style lang="scss">
+  p {
+    font: var(--font-body-3);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
+    background-color: var(--color-bg-overlay);
+    padding: var(--space-m);
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
+
+    .image {
+      object-fit: contain;
+      max-width: 25vw;
+
+      @media screen and (max-width: 720px) {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      align-items: start;
+      flex: 1;
+    }
+
+    h2 {
+      font: var(--font-heading-3);
+    }
+
+    &.small h2 {
+      font: var(--font-heading-4);
+    }
+
+    p {
+      font: var(--font-body-3);
+    }
+
+    &.small p {
+      font: var(--font-body-4);
+    }
+  }
+</style>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import LinkButton from '../components/LinkButton.astro';
 import TopNav from '../components/TopNav.astro';
 import Accomplishments from '../components/Accomplishments.astro';
+import MyWork from '../components/MyWork.astro';
 
 const mhUrl = "https://www.modernhealth.com/";
 const anomalieUrl = "https://www.retaildive.com/news/davids-bridal-acquires-custom-wedding-dress-startup-anomalie/623973/";
@@ -42,6 +43,10 @@ const builtUrl = "http://www.getBuilt.com";
     <article class="content-section">
       <h2 class="heading-3">Accomplishments</h2>
       <Accomplishments />
+    </article>
+    <article class="content-section" id="my-work">
+      <h2 class="heading-3">My Work</h2>
+      <MyWork />
     </article>
 	</main>
 </Layout>

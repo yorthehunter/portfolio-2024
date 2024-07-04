@@ -3,12 +3,13 @@ interface Props {
 	label: string;
 	url?: string;
 	href?: string;
+  newWindow?: boolean;
 }
 
-const { href, url, label } = Astro.props;
+const { href, url, newWindow, label } = Astro.props;
 ---
 
-<a class="link-button" href={href}>{label}</a>
+<a class="link-button" href={href} target={newWindow ? "_blank" : ""}>{label}</a>
 
 <style>
   .link-button {
