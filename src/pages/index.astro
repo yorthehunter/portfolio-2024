@@ -1,43 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import LinkButton from '../components/LinkButton.astro';
-import TopNav from '../components/TopNav.astro';
-import Accomplishments from '../components/Accomplishments.astro';
-import MyWork from '../components/MyWork.astro';
+import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
+import TopNav from "../components/TopNav.astro";
+import Accomplishments from "../components/Accomplishments.astro";
+import MyWork from "../components/MyWork.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Contact from "../components/Contact.astro";
 
 const mhUrl = "https://www.modernhealth.com/";
-const anomalieUrl = "https://www.retaildive.com/news/davids-bridal-acquires-custom-wedding-dress-startup-anomalie/623973/";
+const anomalieUrl =
+  "https://www.retaildive.com/news/davids-bridal-acquires-custom-wedding-dress-startup-anomalie/623973/";
 const sfUrl = "https://www.stitchfix.com/";
 const modClothUrl = "http://www.modcloth.com";
 const builtUrl = "http://www.getBuilt.com";
 ---
 
-<Layout title="Brian Cleveland personal portfolio - Design Leader, Design Systems Designer, and Startup Strategist">
+<Layout
+  title="Brian Cleveland personal portfolio - Design Leader, Design Systems Designer, and Startup Strategist"
+>
   <TopNav />
-	<main>
+  <main>
     <header class="content-section">
       <h1 class="heading-3 all-caps soft">Brian Cleveland</h1>
-      <h2 class="heading-1">Design Leader, Design Systems Designer, & Startup Strategist</h2>
+      <h2 class="heading-1">
+        Design Leader, Design Systems Designer, & Startup Strategist
+      </h2>
       <nav class="navigation-list">
         <ul>
           <li>
-            <LinkButton href="#" label="My Resume" />
+            <LinkButton
+              href="https://docs.google.com/document/d/1AyuuNw0u30vxh8HlWDfZyU2a5A8N4nl_vOzMBexquJQ/edit?usp=sharing"
+              label="My Resume"
+              newWindow
+            />
           </li>
           <li>
-            <LinkButton href="#" label="LinkedIn" />
+            <LinkButton
+              href="https://www.linkedin.com/in/borudesign/"
+              label="LinkedIn"
+              newWindow
+            />
           </li>
           <li>
-            <LinkButton href="#" label="Medium" />
+            <LinkButton
+              href="https://medium.com/@yorthehunter"
+              label="Medium"
+              newWindow
+            />
           </li>
         </ul>
       </nav>
     </header>
     <article class="content-section">
       <p class="body-3">
-        With 14 years of experience in design and development at leading product-driven tech companies, I thrive on transforming visions into tangible solutions. My expertise spans diverse platforms, services, and products, but my true passion lies in creating meaningful experiences for people, especially those on my teams.
+        With 14 years of experience in design and development at leading
+        product-driven tech companies, I thrive on transforming visions into
+        tangible solutions. My expertise spans diverse platforms, services, and
+        products, but my true passion lies in creating meaningful experiences
+        for people, especially those on my teams.
       </p>
       <p class="body-3">
-        Staff designer at <a href={builtUrl} target="_blank">Built Technologies</a> and <a href={mhUrl} target="_blank">Modern Health</a>. Head of design at <a href={anomalieUrl} target="_blank">Anomalie</a> (acquired by David’s Bridal). First designer and later first front-end engineer at <a href={sfUrl} target="_blank">Stitch Fix</a>. Interaction designer at <a href={modClothUrl} target="_blank">ModCloth</a>.
+        Staff designer at <a href={builtUrl} target="_blank"
+          >Built Technologies</a
+        > and <a href={mhUrl} target="_blank">Modern Health</a>. Head of design
+        at <a href={anomalieUrl} target="_blank">Anomalie</a> (acquired by David’s
+        Bridal). First designer and later first front-end engineer at <a
+          href={sfUrl}
+          target="_blank">Stitch Fix</a
+        >. Interaction designer at <a href={modClothUrl} target="_blank"
+          >ModCloth</a
+        >.
       </p>
     </article>
     <article class="content-section">
@@ -48,7 +80,23 @@ const builtUrl = "http://www.getBuilt.com";
       <h2 class="heading-3">My Work</h2>
       <MyWork />
     </article>
-	</main>
+    <article class="content-section" id="about-me">
+      <h2 class="heading-3">About Me</h2>
+      <AboutMe />
+    </article>
+    <article class="content-section" id="about-me">
+      <h2 class="heading-3">Reach Out</h2>
+      <Contact />
+    </article>
+    <footer>
+      <p>
+        This site was built with <a
+          href="https://github.com/yorthehunter/portfolio-2024"
+          target="_blank">Astro and SCSS</a
+        >.
+      </p>
+    </footer>
+  </main>
 </Layout>
 
 <style>
@@ -67,7 +115,7 @@ const builtUrl = "http://www.getBuilt.com";
   .body-4 {
     line-height: 1.5;
   }
-  
+
   .content-section {
     display: flex;
     padding: var(--space-xl) var(--space-s);
@@ -83,7 +131,7 @@ const builtUrl = "http://www.getBuilt.com";
   .heading-1 {
     font: var(--font-heading-1);
   }
-  
+
   .heading-2 {
     font: var(--font-heading-2);
   }
@@ -127,12 +175,23 @@ const builtUrl = "http://www.getBuilt.com";
       flex-direction: column;
     }
   }
-.all-caps {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
+  .all-caps {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
 
-.soft {
-  color: var(--color-secondary);
-}
+  .soft {
+    color: var(--color-secondary);
+  }
+
+  footer {
+    border-top: 2px solid var(--color-primary);
+
+    > p {
+      padding: var(--space-xl) var(--space-s);
+      max-width: 70.5rem;
+      margin: auto;
+      font: var(--font-body-4);
+    }
+  }
 </style>

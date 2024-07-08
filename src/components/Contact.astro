@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import meAndZ from "../assets/images/me-and-z.jpg";
+import LinkButton from "./LinkButton.astro";
+---
+
+<section class="content">
+  <p>
+    Are you interested in my work? Curious to learn more about design systems?
+    Seeking a partner in product strategy or design systems?
+  </p>
+
+  <p>Please reach out if you think we can work together in any way.</p>
+
+  <nav class="navigation-list">
+    <ul>
+      <li>
+        <LinkButton
+          href="https://docs.google.com/document/d/1AyuuNw0u30vxh8HlWDfZyU2a5A8N4nl_vOzMBexquJQ/edit?usp=sharing"
+          label="My Resume"
+          newWindow
+        />
+      </li>
+      <li>
+        <LinkButton
+          href="https://www.linkedin.com/in/borudesign/"
+          label="LinkedIn"
+          newWindow
+        />
+      </li>
+      <li>
+        <LinkButton
+          href="https://medium.com/@yorthehunter"
+          label="Medium"
+          newWindow
+        />
+      </li>
+      <li>
+        <LinkButton label="Email Me" href="mailto:boru.design@gmail.com" />
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<style lang="scss">
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  p {
+    font: var(--font-body-3);
+    margin-bottom: var(--space-m);
+  }
+
+  .navigation-list > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
+  }
+
+  .navigation-list li {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 720px) {
+    .navigation-list > ul {
+      flex-direction: column;
+    }
+  }
+</style>
