@@ -2,12 +2,19 @@
 import { Image } from "astro:assets";
 import meAndZ from "../assets/images/me-and-z.jpg";
 import LinkButton from "./LinkButton.astro";
+
+interface Props {
+	resumeUrl: string;
+  linkedinUrl: string;
+	mediumUrl: string;
+}
+
+const { resumeUrl, linkedinUrl, mediumUrl } = Astro.props;
 ---
 
 <section class="content">
   <p>
-    Are you interested in my work? Curious to learn more about design systems?
-    Seeking a partner in product strategy or design systems?
+    Are you interested in working with me as a design leader? Seeking a partner in product strategy or design systems?
   </p>
 
   <p>Please reach out if you think we can work together in any way.</p>
@@ -15,8 +22,11 @@ import LinkButton from "./LinkButton.astro";
   <nav class="navigation-list">
     <ul>
       <li>
+        <LinkButton label="Email Me" href="mailto:boru.design@gmail.com" />
+      </li>
+      <li>
         <LinkButton
-          href="https://docs.google.com/document/d/1AyuuNw0u30vxh8HlWDfZyU2a5A8N4nl_vOzMBexquJQ/edit?usp=sharing"
+          href={resumeUrl}
           label="My Resume"
           newWindow
         />
@@ -34,9 +44,6 @@ import LinkButton from "./LinkButton.astro";
           label="Medium"
           newWindow
         />
-      </li>
-      <li>
-        <LinkButton label="Email Me" href="mailto:boru.design@gmail.com" />
       </li>
     </ul>
   </nav>

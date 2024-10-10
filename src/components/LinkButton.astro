@@ -9,20 +9,29 @@ interface Props {
 const { href, newWindow, label } = Astro.props;
 ---
 
-<a class="link-button" href={href} target={newWindow ? "_blank" : ""}>{label}</a>
+<a class="link-button" href={href} target={newWindow ? "_blank" : "_self"}>{label}</a>
 
 <style>
   .link-button {
-    transition: background-color 0.15s;
+    transition: color 0.15s, background-color 0.15s;
     text-decoration: none;
+    background-color: var(--color-vibrant);
     font: var(--font-body-4);
-    color: var(--color-bg);
-    background-color: var(--color-secondary);
+    color: var(--color-primary);
     padding: var(--space-2xs) var(--space-s);
     border-radius: 255px;
   }
 
   .link-button:hover {
-    background-color: var(--color-raspberry);
+    background: var(--color-primary);
+    color: var(--color-bg);
   }
+
+  /* Slide 16:9 - 1 */
+
+position: relative;
+width: 1920px;
+height: 1080px;
+
+
 </style>

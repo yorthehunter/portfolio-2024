@@ -13,37 +13,41 @@ const anomalieUrl =
 const sfUrl = "https://www.stitchfix.com/";
 const modClothUrl = "http://www.modcloth.com";
 const builtUrl = "http://www.getBuilt.com";
+
+const resumeUrl = "https://docs.google.com/document/d/14eoXKDrzufrxA0zy-dBMdfNeHzKZI4i_fRlhGyCGU08/edit?usp=sharing"
+const linkedinUrl = "https://www.linkedin.com/in/borudesign/"
+const mediumUrl = "https://medium.com/@yorthehunter"
 ---
 
 <Layout
-  title="Brian Cleveland personal portfolio - Design Leader, Design Systems Designer, and Startup Strategist"
+  title="The portfolio of Brian Cleveland, Experienced design leader and systems strategist"
 >
-  <TopNav />
+  <!-- <TopNav /> -->
   <main>
     <header class="content-section">
       <h1 class="heading-3 all-caps soft">Brian Cleveland</h1>
       <h2 class="heading-1">
-        Design Leader, Design Systems Designer, & Startup Strategist
+        Experienced design leader and systems strategist
       </h2>
       <nav class="navigation-list">
         <ul>
           <li>
             <LinkButton
-              href="https://docs.google.com/document/d/1AyuuNw0u30vxh8HlWDfZyU2a5A8N4nl_vOzMBexquJQ/edit?usp=sharing"
+              href={resumeUrl}
               label="My Resume"
               newWindow
             />
           </li>
           <li>
             <LinkButton
-              href="https://www.linkedin.com/in/borudesign/"
+              href={linkedinUrl}
               label="LinkedIn"
               newWindow
             />
           </li>
           <li>
             <LinkButton
-              href="https://medium.com/@yorthehunter"
+              href={mediumUrl}
               label="Medium"
               newWindow
             />
@@ -53,14 +57,10 @@ const builtUrl = "http://www.getBuilt.com";
     </header>
     <article class="content-section">
       <p class="body-3">
-        With 14 years of experience in design and development at leading
-        product-driven tech companies, I thrive on transforming visions into
-        tangible solutions. My expertise spans diverse platforms, services, and
-        products, but my true passion lies in creating meaningful experiences
-        for people, especially those on my teams.
+        Design leader with 14 years of experience in leading design systems, managing platform design teams, and executing huge design initiatives at product-driven tech companies. Adept at translating business goals into design strategies, fostering innovation, and mentoring design teams to deliver exceptional user experiences. Passionate about building high-performing design teams, scaling processes, and creating meaningful solutions for users and businesses.
       </p>
       <p class="body-3">
-        Staff designer at <a href={builtUrl} target="_blank"
+        Design lead at <a href={builtUrl} target="_blank"
           >Built Technologies</a
         > and <a href={mhUrl} target="_blank">Modern Health</a>. Head of design
         at <a href={anomalieUrl} target="_blank">Anomalie</a> (acquired by David’s
@@ -72,10 +72,10 @@ const builtUrl = "http://www.getBuilt.com";
         >.
       </p>
     </article>
-    <article class="content-section">
+    <!-- <article class="content-section">
       <h2 class="heading-3">Accomplishments</h2>
       <Accomplishments />
-    </article>
+    </article> -->
     <article class="content-section" id="my-work">
       <h2 class="heading-3">My Work</h2>
       <MyWork />
@@ -86,7 +86,7 @@ const builtUrl = "http://www.getBuilt.com";
     </article>
     <article class="content-section" id="about-me">
       <h2 class="heading-3">Reach Out</h2>
-      <Contact />
+      <Contact resumeUrl={resumeUrl} linkedinUrl={linkedinUrl} mediumUrl={mediumUrl} />
     </article>
     <footer>
       <p>
