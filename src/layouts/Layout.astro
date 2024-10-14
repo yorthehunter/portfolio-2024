@@ -24,6 +24,17 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	html.dark {
+		/* --color-raspberry: #FF2D78; */
+		--color-vibrant: #00b594;
+		--color-vibrant-dark: #18F1CA;
+		--color-primary: #fff;
+		--color-secondary: #ddd;
+		--color-bg: #151518;
+		--color-bg-soften: #28272c;
+		--color-bg-overlay: rgba(255, 255, 255, 0.1);
+	}
+
 	:root {
 		--color-raspberry: #FF2D78;
 		--color-vibrant: #18F1CA;
@@ -72,6 +83,8 @@ const { title } = Astro.props;
 		font-family: var(--font-family);
 		font-size: 16px;
 		background-color: var(--color-bg);
+		transition: background-color 0.15s ease-out;
+		scroll-behavior: smooth;
 	}
 	body {
 		color: var(--color-primary);

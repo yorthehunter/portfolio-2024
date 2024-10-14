@@ -7,7 +7,7 @@ import Accomplishments from "../components/Accomplishments.astro";
 import MyWork from "../components/MyWork.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Contact from "../components/Contact.astro";
-import heroImg from "../assets/images/brian-cleveland-simpsonized.svg";
+import ThemeIcon from '../components/ThemeIcon.astro';
 
 const mhUrl = "https://www.modernhealth.com/";
 const anomalieUrl =
@@ -24,10 +24,9 @@ const mediumUrl = "https://medium.com/@yorthehunter"
 <Layout
   title="The portfolio of Brian Cleveland, Experienced design leader and systems strategist"
 >
-  <!-- <TopNav /> -->
+  <TopNav />
   <main>
     <header class="content-section">
-      <Image src={heroImg} alt="Picture of me as a Simpsons character" loading="lazy" />
       <h1 class="heading-3 all-caps soft">Brian Cleveland</h1>
       <h2 class="heading-1">
         Experienced Product Designer Specializing in Elevating Startups, Design Systems, and Platform UI
