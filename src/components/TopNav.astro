@@ -5,7 +5,7 @@ import ThemeIcon from './ThemeIcon.astro';
 ---
 
 <nav>
-  <a href="#" class="logo">
+  <a href="#main" class="logo">
     <Fragment set:html={BrianCleveland} />
     <span>Brian Cleveland</span>
   </a>
@@ -51,6 +51,8 @@ import ThemeIcon from './ThemeIcon.astro';
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 80rem;
+    margin: auto;
 
     ul {
       list-style-type: none;
