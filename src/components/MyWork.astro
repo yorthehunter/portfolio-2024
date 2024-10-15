@@ -4,7 +4,7 @@ import LinkButton from "../components/LinkButton.astro";
 import modeDS from "../assets/images/example-mode-ds.png";
 import colorPalette from "../assets/images/example-color-palette.png";
 import homeScreen from "../assets/images/example-home-screen.png";
-import returnsProcess from "../assets/images/example-returns-process.png";
+import returnsProcess from "../assets/images/example-returns-bins.jpg";
 import globalNav from "../assets/images/example-global-nav.png";
 ---
 
@@ -32,10 +32,9 @@ import globalNav from "../assets/images/example-global-nav.png";
       <h2>Introducing the Mode Design System</h2>
       <p>
         Led the design of the Mode Design System, the customer-facing DS at
-        Stitch Fix. Rolled out a cross-platform UI system serving 80+ engineers
-        and enabling an entire rebrand of the customer UX.
+        Stitch Fix. Rolled out a cross-platform UI system serving 100+ product partners on 16 customer-facing teams, enabling the rebrand of the customer UX.
       </p>
-      <LinkButton newWindow label="Read on Medium" href="https://yorthehunter.medium.com/introducing-the-mode-design-system-b3a64cb916da?sk=7450450ef476290ea72991dc0c0110c8" />
+      <LinkButton inverse newWindow label="Read on Medium" href="https://yorthehunter.medium.com/introducing-the-mode-design-system-b3a64cb916da?sk=7450450ef476290ea72991dc0c0110c8" />
     </section>
   </li>
   <li class="work-card">
@@ -47,11 +46,26 @@ import globalNav from "../assets/images/example-global-nav.png";
     <section class="content">
       <h2>Creating an Accessible, Scalable Color Palette</h2>
       <p>
-        Redesigned the color palette for all platforms at Modern Health. Enabled
-        WCAG-compliance at scale and an evolvable color solution by means of the
-        design system, Vita.
+        Redesigned the color palette for all web and mobile platforms (member, provider, client) at Modern Health. Enabled
+        WCAG-compliance at scale and an enhanced UX through better accessibility of design.
       </p>
-      <LinkButton newWindow label="Read on Medium" href="https://yorthehunter.medium.com/how-we-created-an-accessible-scalable-color-palette-2ae1242abdcb" />
+      <LinkButton inverse newWindow label="Read on Medium" href="https://yorthehunter.medium.com/how-we-created-an-accessible-scalable-color-palette-2ae1242abdcb" />
+    </section>
+  </li>
+  <li class="work-card ">
+    <Image
+      src={returnsProcess}
+      alt="A stock image of a full loading dock"
+      class="image"
+    />
+    <section class="content">
+      <h2>Designing a Returns Process that Reflects Reality</h2>
+      <p>
+        Designed a new returns process at Stitch Fix by mapping the physical
+        space of users to a digital experience, resulting in a 50% increase in
+        throughput efficiency and 15% reduction in mistakes.
+      </p>
+      <LinkButton inverse newWindow label="View Figma Case Study" href="https://www.figma.com/proto/wS6ueswXKU1mBg4spRq1C6/Portfolio-2023%E2%80%932024?node-id=765-370&node-type=section&t=OCbnbU6f7Ta94OPS-1&scaling=contain&content-scaling=fixed&page-id=762%3A18068" />
     </section>
   </li>
   <li class="work-card small">
@@ -63,9 +77,7 @@ import globalNav from "../assets/images/example-global-nav.png";
     <section class="content">
       <h2>Launched a New, Personalized Home Screen</h2>
       <p>
-        Reimagined a new home screen experience for members at Modern Health,
-        resulting in higher retention, higher engagement, and enablement of
-        dynamic, personalized product features at scale.
+        Designed a modular home screen, resulting in 25% higher retention, better user engagement, and the launch of algorithmically personalized content.
       </p>
       <p><em>Please Ask for Details About this Project</em></p>
     </section>
@@ -80,28 +92,13 @@ import globalNav from "../assets/images/example-global-nav.png";
       <h2>Launched Multi-platform Global Navigation</h2>
       <p>
         Componentized our global navigation across all platforms at Modern
-        Health, enabling global search and increasing engagement with all
+        Health, enabling global search and increasing engagement by 35% with all
         member-facing products.
       </p>
       <p><em>Please Ask for Details About this Project</em></p>
     </section>
   </li>
-  <li class="work-card small">
-    <Image
-      src={returnsProcess}
-      alt="A stock image of a full loading dock"
-      class="image"
-    />
-    <section class="content">
-      <h2>Designing a Returns Process that Reflects Reality</h2>
-      <p>
-        Designed a new returns process at Stitch Fix by mapping the physical
-        space of users to a digital experience, resulting in a 25% increase in
-        productivity.
-      </p>
-      <p><em>Please Ask for Details About this Project</em></p>
-    </section>
-  </li>
+
 </ul>
 
 <style lang="scss">
@@ -121,7 +118,9 @@ import globalNav from "../assets/images/example-global-nav.png";
     display: flex;
     flex-direction: row;
     gap: var(--space-s);
-    border: 2px solid var(--color-secondary);
+    border-radius: 20px;
+    background: var(--color-vibrant-gradient);
+    color: var(--color-primary);
     padding: var(--space-m);
 
     @media screen and (max-width: 720px) {
