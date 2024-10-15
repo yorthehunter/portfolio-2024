@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@fontsource-variable/montserrat": "^5.0.19",
+    "@fontsource-variable/open-sans": "^5.1.0",
     "astro": "^4.11.3",
     "sass": "^1.77.6",
     "sharp": "^0.33.4",
