@@ -1,12 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import LinkButton from './LinkButton.astro';
-import BrianCleveland from "../assets/images/brian-cleveland-simpsonized.svg?raw"; 
+import brianCleveland from "../assets/images/me-and-anna.png"; 
 import ThemeIcon from './ThemeIcon.astro';
 ---
 
 <nav>
   <a href="#main" class="logo">
-    <Fragment set:html={BrianCleveland} />
+    <Image
+      src={brianCleveland}
+      alt="A photo of me and my wife Anna at the beach"
+      class="image"
+    />
     <span>Brian Cleveland</span>
   </a>
   <ul>
