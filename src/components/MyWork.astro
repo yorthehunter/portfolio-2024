@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import LinkButton from "../components/LinkButton.astro";
-import modeDS from "../assets/images/example-mode-ds.png";
-import colorPalette from "../assets/images/example-color-palette.png";
-import homeScreen from "../assets/images/example-home-screen.png";
-import returnsProcess from "../assets/images/example-returns-bins.jpg";
-import globalNav from "../assets/images/example-global-nav.png";
+import modeDS from "../assets/images/sample-sf-mode.png";
+import colorPalette from "../assets/images/sample-mh-colors.png";
+import homeScreen from "../assets/images/sample-mh-home.png";
+import returnsProcess from "../assets/images/sample-sf-returns.png";
+import globalNav from "../assets/images/sample-mh-nav.png";
 ---
 
 <p>
@@ -25,6 +25,7 @@ import globalNav from "../assets/images/example-global-nav.png";
       src={modeDS}
       alt="Screenshot of the Mode Design System from Stitch Fix"
       class="image"
+      loading="lazy"
     />
     <section class="content">
       <h2>Introducing the Mode Design System</h2>
@@ -40,6 +41,7 @@ import globalNav from "../assets/images/example-global-nav.png";
       src={colorPalette}
       alt="Color examples from the Vita Design System color palette"
       class="image"
+      loading="lazy"
     />
     <section class="content">
       <h2>Creating an Accessible, Scalable Color Palette</h2>
@@ -50,11 +52,12 @@ import globalNav from "../assets/images/example-global-nav.png";
       <LinkButton newWindow label="Read on Medium" href="https://yorthehunter.medium.com/how-we-created-an-accessible-scalable-color-palette-2ae1242abdcb" />
     </section>
   </li>
-  <li class="work-card ">
+  <li class="work-card">
     <Image
       src={returnsProcess}
       alt="A stock image of a full loading dock"
       class="image"
+      loading="lazy"
     />
     <section class="content">
       <h2>Designing a Returns Process that Reflects Reality</h2>
@@ -66,7 +69,7 @@ import globalNav from "../assets/images/example-global-nav.png";
       <LinkButton newWindow label="View Case Study Figma Presentation" href="https://www.figma.com/proto/wS6ueswXKU1mBg4spRq1C6/Portfolio-2023%E2%80%932024?node-id=765-370&node-type=section&t=OCbnbU6f7Ta94OPS-1&scaling=contain&content-scaling=fixed&page-id=762%3A18068" />
     </section>
   </li>
-  <li class="work-card small">
+  <li class="work-card">
     <Image
       src={homeScreen}
       alt="Desktop and mobile views of the new home screen at Modern Health"
@@ -77,14 +80,15 @@ import globalNav from "../assets/images/example-global-nav.png";
       <p>
         Designed a modular home screen, resulting in 25% higher retention, better user engagement, and the launch of algorithmically personalized content.
       </p>
-      <p><em>Please Ask for Details About this Project</em></p>
+      <span><em>Please Ask for Details About this Project</em></span>
     </section>
   </li>
-  <li class="work-card small">
+  <li class="work-card">
     <Image
       src={globalNav}
       alt="A screenshot of the spec work for the Global Navigation in the Vita Design System from Modern Health"
       class="image"
+      loading="lazy"
     />
     <section class="content">
       <h2>Launched Multi-platform Global Navigation</h2>
@@ -93,7 +97,7 @@ import globalNav from "../assets/images/example-global-nav.png";
         Health, enabling global search and increasing engagement by 35% with all
         member-facing products.
       </p>
-      <p><em>Please Ask for Details About this Project</em></p>
+      <span><em>Please Ask for Details About this Project</em></span>
     </section>
   </li>
 
@@ -117,19 +121,26 @@ import globalNav from "../assets/images/example-global-nav.png";
     flex-direction: row;
     gap: var(--space-s);
     border-radius: 20px;
-    border: 3px solid var(--color-vibrant);
-    color: var(--color-primary);
-    padding: var(--space-m);
+    background: var(--color-vibrant-gradient);
+    padding: var(--space-m) var(--space-m) 0;
+    position: relative;
 
     @media screen and (max-width: 720px) {
       flex-direction: column;
     }
 
+    &:hover .content {
+      visibility: visible;
+      opacity: 1;
+    }
+
     .image {
       object-fit: contain;
-      max-width: 25vw;
+      max-width: min(700px, 100%);
+      height: auto;
+      margin: auto;
 
-      @media screen and (max-width: 720px) {
+      @media screen and (max-width: 812px) {
         max-width: 100%;
         width: 100%;
         object-fit: cover;
@@ -137,11 +148,30 @@ import globalNav from "../assets/images/example-global-nav.png";
     }
 
     .content {
+      transition: visibility 0s, opacity 0.15s ease-in;
+      visibility: hidden;
+      opacity: 0;
+      padding: var(--space-m) var(--space-m);
+      border-radius: 20px;
+      color: white;
       display: flex;
+      justify-content: flex-end;
       flex-direction: column;
       gap: var(--space-xs);
       align-items: start;
       flex: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: var(--color-bg-overlay-dark);
+
+      > p {
+        @media screen and (max-width: 812px) {
+          display: none;
+        }
+      }
     }
 
     h2 {
