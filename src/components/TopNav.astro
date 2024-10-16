@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import LinkButton from './LinkButton.astro';
-import brianCleveland from "../assets/images/me-and-anna.png"; 
+import brianCleveland from "../assets/images/brian-cleveland-headshot.png"; 
 import ThemeIcon from './ThemeIcon.astro';
 ---
 
@@ -11,6 +11,7 @@ import ThemeIcon from './ThemeIcon.astro';
       src={brianCleveland}
       alt="A photo of me and my wife Anna at the beach"
       class="image"
+      loading="lazy"
     />
     <span>Brian Cleveland</span>
   </a>
@@ -35,11 +36,16 @@ import ThemeIcon from './ThemeIcon.astro';
     align-items: center;
     gap: var(--space-2xs);
 
-    :global(svg) {
-      @media screen and (max-width: 380px) {
-        display: none;
-      }
+    .image {
+      max-width: 56px;
+      max-height: 56px;
     }
+
+    // :global(img) {
+    //   @media screen and (max-width: 380px) {
+    //     display: none;
+    //   }
+    // }
 
     span {
       font: var(--font-heading-6);
