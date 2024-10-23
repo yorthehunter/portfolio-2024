@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/montserrat';
+import '@fontsource-variable/literata';
 
 interface Props {
 	title: string;
@@ -49,7 +50,8 @@ const { title } = Astro.props;
 		--color-vibrant-gradient: radial-gradient(100% 316.05% at 0% 100%, #00CBC4 0%, #18F1CA 50%, #5BF4AB 100%);
 
 		--font-family: 'Montserrat Variable', sans-serif;
-		--font-heading-weight: 700;
+		--secondary-font-family: 'Literata Variable', serif;
+		--font-heading-weight: 600;
 		--font-body-weight: 400;
 		--font-step--1: clamp(0.8333rem, 0.7318rem + 0.5077vi, 1.1253rem) / 1.5;
 		--font-step-0: clamp(1rem, 0.8261rem + 0.8696vi, 1.5rem) / 1.5;
@@ -57,12 +59,12 @@ const { title } = Astro.props;
 		--font-step-2: clamp(1.44rem, 1.0138rem + 2.131vi, 2.6653rem) / 1.25;
 		--font-step-3: clamp(1.728rem, 1.0933rem + 3.1737vi, 3.5529rem) / 1.25;
 		--font-step-4: clamp(2.0736rem, 1.1475rem + 4.6303vi, 4.736rem) / 1.25;
-		--font-heading-1: var(--font-heading-weight) var(--font-step-4) var(--font-family);
-		--font-heading-2: var(--font-heading-weight) var(--font-step-3) var(--font-family);
-		--font-heading-3: var(--font-heading-weight) var(--font-step-2) var(--font-family);
-		--font-heading-4: var(--font-heading-weight) var(--font-step-1) var(--font-family);
-		--font-heading-5: var(--font-heading-weight) var(--font-step-0) var(--font-family);
-		--font-heading-6: var(--font-heading-weight) var(--font-step--1) var(--font-family);
+		--font-heading-1: var(--font-heading-weight) var(--font-step-4) var(--secondary-font-family);
+		--font-heading-2: var(--font-heading-weight) var(--font-step-3) var(--secondary-font-family);
+		--font-heading-3: var(--font-heading-weight) var(--font-step-2) var(--secondary-font-family);
+		--font-heading-4: var(--font-heading-weight) var(--font-step-1) var(--secondary-font-family);
+		--font-heading-5: var(--font-heading-weight) var(--font-step-0) var(--secondary-font-family);
+		--font-heading-6: var(--font-heading-weight) var(--font-step--1) var(--secondary-font-family);
 		--font-body-1: var(--font-body-weight) var(--font-step-2) var(--font-family);
 		--font-body-2: var(--font-body-weight) var(--font-step-1) var(--font-family);
 		--font-body-3: var(--font-body-weight) var(--font-step-0) var(--font-family);

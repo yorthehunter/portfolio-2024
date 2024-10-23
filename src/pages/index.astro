@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import LinkButton from "../components/LinkButton.astro";
 import TopNav from "../components/TopNav.astro";
 // import Accomplishments from "../components/Accomplishments.astro";
+import MyStory from "../components/MyStory.astro";
 import MyWork from "../components/MyWork.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Contact from "../components/Contact.astro";
@@ -20,14 +21,17 @@ const mediumUrl = "https://medium.com/@yorthehunter"
 ---
 
 <Layout
-  title="Brian Cleveland - experienced design leader and systems strategist"
+  title="Brian Cleveland: Principal Product Designer and Design Leader"
 >
   <TopNav />
   <main id="main">
     <header class="content-section">
       <h1 class="heading-1">
-        Experienced Product Designer: Team Lead, Design Systems, and Platform
+        Principal Product Designer and Design Leader
       </h1>
+      <h2 class="body-2">
+        Hi, I'm Brian Cleveland, a product designer with 15 years of experience in design systems, managing platform design teams, and delivering major initiatives at product-driven tech companies. Adept at translating business goals into design strategies, fostering innovation, and mentoring design teams to deliver exceptional user experiences.
+      </h2>
       <nav class="navigation-list">
         <ul>
           <li>
@@ -56,14 +60,18 @@ const mediumUrl = "https://medium.com/@yorthehunter"
     </header>
     <article class="content-section">
       <p class="body-3">
-        Hi, I'm Brian Cleveland, a product designer with 15 years of experience in design systems, managing platform design teams, and delivering major initiatives at product-driven tech companies. Adept at translating business goals into design strategies, fostering innovation, and mentoring design teams to deliver exceptional user experiences.
+
+
+
+
+
       </p>
       <p class="body-3">
-        Design lead at <a href={builtUrl} target="_blank"
+        Staff designer at <a href={builtUrl} target="_blank"
           >Built Technologies</a
-        > and <a href={mhUrl} target="_blank">Modern Health</a>. Principal design engineer and head of design
+        > and <a href={mhUrl} target="_blank">Modern Health</a>. Principal designer
         at <a href={anomalieUrl} target="_blank">Anomalie</a> (acquired by David’s
-        Bridal). First designer and later first front-end engineer at <a
+        Bridal). First designer and later first lead platform designer at <a
           href={sfUrl}
           target="_blank">Stitch Fix</a
         >. Interaction designer at <a href={modClothUrl} target="_blank"
@@ -75,6 +83,10 @@ const mediumUrl = "https://medium.com/@yorthehunter"
       <h2 class="heading-3">Accomplishments</h2>
       <Accomplishments />
     </article> -->
+    <article class="content-section" id="my-story">
+      <h2 class="heading-3">My Story</h2>
+      <MyStory />
+    </article>
     <article class="content-section" id="my-work">
       <h2 class="heading-3">My Work</h2>
       <MyWork />
@@ -82,7 +94,7 @@ const mediumUrl = "https://medium.com/@yorthehunter"
     <article class="content-section" id="about-me">
       <h2 class="heading-3">About Me</h2>
       <AboutMe />
-    </article>œœ
+    </article>
     <article class="content-section" id="reach-out">
       <h2 class="heading-3">Reach Out</h2>
       <Contact resumeUrl={resumeUrl} linkedinUrl={linkedinUrl} mediumUrl={mediumUrl} />

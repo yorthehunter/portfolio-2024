@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.5.2)
+      '@fontsource-variable/literata':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource-variable/montserrat':
         specifier: ^5.0.19
         version: 5.0.19
@@ -339,6 +342,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/literata@5.1.0':
+    resolution: {integrity: sha512-GBKHa7tj/Js5Se2I4Tl3Oxe182jxXlKsqegetraVOYVhRiOF8Ct8hVhFhrbjk7M97i7binFQZjv9K9YOQSsO6w==}
 
   '@fontsource-variable/montserrat@5.0.19':
     resolution: {integrity: sha512-vOlVjdGock2yBOeBbg5qexPa1TJM/PS8Nx9YlF6DFEtFf/Y5ayDbZRvV/WPj8W2vk7/aDxUEtTAp/Qp8wK9hNQ==}
@@ -2217,6 +2223,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource-variable/literata@5.1.0': {}
 
   '@fontsource-variable/montserrat@5.0.19': {}
 
