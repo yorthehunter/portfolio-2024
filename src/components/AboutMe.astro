@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import meAndZ from "../assets/images/me-and-z.jpg";
 import LinkButton from "./LinkButton.astro";
+import MyStory from "./MyStory.astro";
 ---
 
 <section class="split">
@@ -27,6 +28,7 @@ import LinkButton from "./LinkButton.astro";
     <p>I'm reminded daily how lucky I am.</p>
   </div>
 </section>
+<slot name="aboutMe" />
 
 <style lang="scss">
   .image {
@@ -58,5 +60,9 @@ import LinkButton from "./LinkButton.astro";
   p {
     font: var(--font-body-3);
     margin-bottom: var(--space-m);
+  }
+
+  h3 {
+    font: var(--font-heading-3);
   }
 </style>

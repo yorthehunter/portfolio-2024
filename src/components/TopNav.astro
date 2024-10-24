@@ -36,16 +36,14 @@ import ThemeIcon from './ThemeIcon.astro';
     align-items: center;
     gap: var(--space-2xs);
 
+    @media screen and (max-width: 360px) {
+      display: none;
+    }
+
     .image {
       max-width: 56px;
       max-height: 56px;
     }
-
-    // :global(img) {
-    //   @media screen and (max-width: 380px) {
-    //     display: none;
-    //   }
-    // }
 
     span {
       font: var(--font-heading-6);
@@ -64,15 +62,18 @@ import ThemeIcon from './ThemeIcon.astro';
     align-items: center;
     max-width: 80rem;
     margin: auto;
+    height: 3rem;
 
     ul {
       list-style-type: none;
       display: flex;
       flex-direction: row;
-      gap: var(--space-s);
+      gap: var(--space-2xs);
+      height: 100%;
+      align-items: center;
 
       li {
-        display: flex;
+        // display: flex;
       }
     }  
   }

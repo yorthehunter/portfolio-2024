@@ -12,6 +12,19 @@
       border: 0;
       background: none;
       cursor: pointer;
+      border-radius: 255px;
+      aspect-ratio: 1 / 1;
+      min-height: 100%;
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      
+      transition: 0.15s background-color ease-out;
+
+      &:hover {
+        background-color: var(--color-bg-soften);
+      }
     }
     .sun { fill: var(--color-primary); }
     .moon { fill: transparent; }
