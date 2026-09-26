@@ -27,18 +27,25 @@ const mediumUrl = "https://medium.com/@yorthehunter"
   <TopNav />
   <main id="main">
     <header class="content-section">
+      <p class="eyebrow all-caps soft">Brian Cleveland</p>
       <h1 class="heading-1">
-        Product Design Leader - Systems, Platforms, and Teams
+        I build the teams, systems, and product foundations that help complex organizations scale.
       </h1>
       <h2 class="body-2">
-        I build the systems, teams, and product foundations that help organizations design and ship better products at scale. For over 15 years, I've worked across product design, design systems, platform strategy, and front-end engineering. My background sits at the intersection of design craft, technical systems thinking, and people leadership. I enjoy building the foundation—and the team—that allows great product work to scale.
+        Product design leader with 15+ years across enterprise platforms, design systems, and design engineering. Currently leading a distributed design team across web, mobile, and connected products at Tive.
       </h2>
       <nav class="navigation-list">
         <ul>
           <li>
             <LinkButton
+              href="#my-work"
+              label="View Leadership Work"
+            />
+          </li>
+          <li>
+            <LinkButton
               href={resumeUrl}
-              label="My Resume"
+              label="Resume"
               newWindow
             />
           </li>
@@ -49,15 +56,11 @@ const mediumUrl = "https://medium.com/@yorthehunter"
               newWindow
             />
           </li>
-          <li>
-            <LinkButton
-              href={mediumUrl}
-              label="Medium"
-              newWindow
-            />
-          </li>
         </ul>
       </nav>
+      <p class="credibility-strip body-4 soft">
+        15+ years <span aria-hidden="true">·</span> 3 senior designers led <span aria-hidden="true">·</span> 150+ system components <span aria-hidden="true">·</span> 40% &rarr; 90% adoption <span aria-hidden="true">·</span> Design + engineering background
+      </p>
     </header>
     <article class="content-section">
       <p class="body-3">
@@ -177,6 +180,18 @@ const mediumUrl = "https://medium.com/@yorthehunter"
 
   .soft {
     color: var(--color-secondary);
+  }
+
+  .eyebrow {
+    font: var(--font-body-4);
+    margin-bottom: -1.5rem;
+  }
+
+  .credibility-strip {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--space-2xs);
+    row-gap: var(--space-3xs);
   }
 
   footer {
