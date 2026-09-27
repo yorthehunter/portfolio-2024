@@ -1,0 +1,96 @@
+---
+const orgImpact = [
+  "Led a distributed, senior design team",
+  "Established critique and validation practices",
+  "Built cross-functional governance",
+  "Increased designer ownership",
+];
+
+const stats = [
+  { value: "40% → 90%+", label: "Design-system adoption" },
+  { value: "+50%", label: "Warehouse throughput" },
+  { value: "+25%", label: "Product retention" },
+];
+---
+
+<div class="impact-grid">
+  <div class="impact-column">
+    <h3>Team &amp; organizational impact</h3>
+    <ul class="impact-list">
+      {orgImpact.map((item) => (
+        <li><span class="marker" aria-hidden="true">&rarr;</span> {item}</li>
+      ))}
+    </ul>
+  </div>
+  <div class="impact-column">
+    <h3>Product &amp; systems impact</h3>
+    <div class="stat-list">
+      {stats.map((stat) => (
+        <div class="stat-row">
+          <p class="stat-value">{stat.value}</p>
+          <p class="stat-label">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-l);
+
+    @media screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-m);
+    }
+  }
+
+  .impact-column h3 {
+    font: var(--font-heading-4);
+    margin-bottom: var(--space-s);
+  }
+
+  .impact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .impact-list li {
+    font: var(--font-body-3);
+    display: flex;
+    gap: var(--space-2xs);
+  }
+
+  .marker {
+    color: var(--color-vibrant-dark);
+    flex: 0 0 auto;
+  }
+
+  .stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .stat-value {
+    font: var(--font-heading-weight) var(--font-size-1)/1.1 var(--secondary-font-family);
+    color: var(--color-vibrant-dark);
+    white-space: nowrap;
+  }
+
+  .stat-label {
+    font: var(--font-body-4);
+    color: var(--color-secondary);
+  }
+</style>
