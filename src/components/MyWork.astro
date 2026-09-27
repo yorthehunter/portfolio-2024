@@ -4,8 +4,6 @@ import LinkButton from "../components/LinkButton.astro";
 import modeDS from "../assets/images/sample-sf-mode.png";
 import returnsProcess from "../assets/images/sample-sf-returns.png";
 
-const base = import.meta.env.BASE_URL;
-
 const featuredStories = [
   {
     tags: ["Team leadership", "Operating model", "Enterprise platform"],
@@ -80,10 +78,6 @@ const featuredStories = [
     </article>
   ))}
 </div>
-
-<p class="see-more">
-  <a href={`${base}/work`}>See more of my work &rarr;</a>
-</p>
 
 <style lang="scss">
   p {
@@ -170,10 +164,5 @@ const featuredStories = [
     border-left: 3px solid var(--color-vibrant);
     padding-left: var(--space-xs);
     margin: 0;
-  }
-
-  .see-more {
-    font: var(--font-body-3);
-    margin-top: var(--space-m);
   }
 </style>

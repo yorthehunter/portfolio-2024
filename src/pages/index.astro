@@ -18,6 +18,8 @@ const tiveUrl = "http://www.tive.com";
 const resumeUrl = "https://docs.google.com/document/d/1SaZ4JSDOMKmL3DXPAOlfW2wrOcPJz3YNPabrS91beSI/edit?usp=sharing"
 const linkedinUrl = "https://www.linkedin.com/in/borudesign/"
 const mediumUrl = "https://medium.com/@yorthehunter"
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -87,6 +89,9 @@ const mediumUrl = "https://medium.com/@yorthehunter"
     <article class="content-section" id="my-work">
       <h2 class="heading-3">Leadership Work</h2>
       <MyWork />
+      <p class="body-3">
+        <a href={`${base}/work`}>See more of my work &rarr;</a>
+      </p>
     </article>
     <article class="content-section" id="selected-impact">
       <h2 class="heading-3">Selected Impact</h2>
