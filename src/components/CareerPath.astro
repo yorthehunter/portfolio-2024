@@ -1,0 +1,82 @@
+---
+const steps = [
+  { title: "Product designer", tag: "ModCloth" },
+  { title: "Design engineer", tag: "Stitch Fix" },
+  { title: "Platform designer", tag: "Stitch Fix" },
+  { title: "Systems leader", tag: "Built Technologies · Modern Health" },
+  { title: "Product design manager", tag: "Tive — current" },
+];
+---
+
+<div class="career-path">
+  <ol class="path">
+    {steps.map((step, i) => (
+      <>
+        <li class="step" data-current={i === steps.length - 1}>
+          <p class="step-title">{step.title}</p>
+          <p class="step-tag">{step.tag}</p>
+        </li>
+        {i < steps.length - 1 && (
+          <li class="arrow" aria-hidden="true">&rarr;</li>
+        )}
+      </>
+    ))}
+  </ol>
+  <p class="path-summary">
+    Each step added a lens without dropping the last one—craft, code,
+    systems, and now leadership all still inform how I work. That's why I
+    can coach designers, engage engineering deeply, and lead complex
+    platforms at the same time.
+  </p>
+</div>
+
+<style lang="scss">
+  .path {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+    margin-bottom: var(--space-m);
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+
+    &[data-current] .step-title {
+      color: var(--color-vibrant-dark);
+    }
+  }
+
+  .step-title {
+    font: var(--font-heading-5);
+  }
+
+  .step-tag {
+    font: var(--font-body-4);
+    color: var(--color-secondary);
+  }
+
+  .arrow {
+    font: var(--font-heading-5);
+    color: var(--color-vibrant-dark);
+    opacity: 0.6;
+
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .path-summary {
+    font: var(--font-body-3);
+    max-width: 45rem;
+  }
+</style>

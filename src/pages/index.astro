@@ -3,9 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import LinkButton from "../components/LinkButton.astro";
 import TopNav from "../components/TopNav.astro";
 // import Accomplishments from "../components/Accomplishments.astro";
-import MyStory from "../components/MyStory.astro";
 import MyWork from "../components/MyWork.astro";
-import AboutMe from "../components/AboutMe.astro";
+import SelectedImpact from "../components/SelectedImpact.astro";
 import Contact from "../components/Contact.astro";
 
 const mhUrl = "https://www.modernhealth.com/";
@@ -19,6 +18,8 @@ const tiveUrl = "http://www.tive.com";
 const resumeUrl = "https://docs.google.com/document/d/1SaZ4JSDOMKmL3DXPAOlfW2wrOcPJz3YNPabrS91beSI/edit?usp=sharing"
 const linkedinUrl = "https://www.linkedin.com/in/borudesign/"
 const mediumUrl = "https://medium.com/@yorthehunter"
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -27,18 +28,25 @@ const mediumUrl = "https://medium.com/@yorthehunter"
   <TopNav />
   <main id="main">
     <header class="content-section">
+      <p class="eyebrow all-caps soft">Brian Cleveland</p>
       <h1 class="heading-1">
-        Product Design Leader - Systems, Platforms, and Teams
+        I build the teams, systems, and product foundations that help complex organizations scale.
       </h1>
       <h2 class="body-2">
-        I build the systems, teams, and product foundations that help organizations design and ship better products at scale. For over 15 years, I've worked across product design, design systems, platform strategy, and front-end engineering. My background sits at the intersection of design craft, technical systems thinking, and people leadership. I enjoy building the foundation—and the team—that allows great product work to scale.
+        Product design leader with 16 years across enterprise platforms, design systems, and design engineering. Currently leading a distributed design team across web, mobile, and hardware at <a href={tiveUrl} target="_blank">Tive</a>.
       </h2>
       <nav class="navigation-list">
         <ul>
           <li>
             <LinkButton
+              href="#my-work"
+              label="View Leadership Work"
+            />
+          </li>
+          <li>
+            <LinkButton
               href={resumeUrl}
-              label="My Resume"
+              label="Resume"
               newWindow
             />
           </li>
@@ -49,15 +57,11 @@ const mediumUrl = "https://medium.com/@yorthehunter"
               newWindow
             />
           </li>
-          <li>
-            <LinkButton
-              href={mediumUrl}
-              label="Medium"
-              newWindow
-            />
-          </li>
         </ul>
       </nav>
+      <p class="credibility-strip body-4 soft">
+        16 years <span aria-hidden="true">·</span> 3 senior designers led <span aria-hidden="true">·</span> 150+ system components <span aria-hidden="true">·</span> 40% &rarr; 90% adoption <span aria-hidden="true">·</span> Design + engineering background
+      </p>
     </header>
     <article class="content-section">
       <p class="body-3">
@@ -83,17 +87,15 @@ const mediumUrl = "https://medium.com/@yorthehunter"
       <Accomplishments />
     </article> -->
     <article class="content-section" id="my-work">
-      <h2 class="heading-3">My Work</h2>
+      <h2 class="heading-3">Leadership Work</h2>
       <MyWork />
+      <p class="body-3">
+        <a href={`${base}/work`}>See more of my work &rarr;</a>
+      </p>
     </article>
-    <article class="content-section" id="about-me">
-      <h2 class="heading-3">About Me</h2>
-      <AboutMe>
-        <article class="content-section" id="reach-out" slot="aboutMe">
-          <h3 class="heading-4">My Design Journey</h3>
-          <MyStory />
-        </article>
-      </AboutMe>
+    <article class="content-section" id="selected-impact">
+      <h2 class="heading-3">Selected Impact</h2>
+      <SelectedImpact />
     </article>
     <article class="content-section" id="reach-out">
       <h2 class="heading-3">Reach Out</h2>
@@ -109,84 +111,3 @@ const mediumUrl = "https://medium.com/@yorthehunter"
     </footer>
   </main>
 </Layout>
-
-<style>
-  .content-section {
-    display: flex;
-    padding: var(--space-xl) var(--space-s);
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2.5rem;
-    align-self: stretch;
-    max-width: 70.5rem;
-    margin: auto;
-  }
-
-  .heading-1 {
-    font: var(--font-heading-1);
-  }
-
-  .heading-2 {
-    font: var(--font-heading-2);
-  }
-
-  .heading-3 {
-    font: var(--font-heading-3);
-  }
-
-  .heading-4 {
-    font: var(--font-heading-4);
-  }
-
-  .body-1 {
-    font: var(--font-body-1);
-  }
-
-  .body-2 {
-    font: var(--font-body-2);
-  }
-
-  .body-3 {
-    font: var(--font-body-3);
-  }
-
-  .body-4 {
-    font: var(--font-body-4);
-  }
-  .navigation-list > ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-2xs);
-  }
-
-  .navigation-list li {
-    display: flex;
-  }
-
-  @media only screen and (max-width: 380px) {
-    .navigation-list > ul {
-      flex-direction: column;
-    }
-  }
-  .all-caps {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .soft {
-    color: var(--color-secondary);
-  }
-
-  footer {
-    border-top: 3px solid var(--color-vibrant);
-
-    > p {
-      padding: var(--space-xl) var(--space-s);
-      max-width: 70.5rem;
-      margin: auto;
-      font: var(--font-body-4);
-    }
-  }
-</style>

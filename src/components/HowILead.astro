@@ -1,0 +1,91 @@
+---
+const principles = [
+  {
+    title: "Create clarity from ambiguity",
+    sentence:
+      "I turn undefined problems into a shared plan the whole team can execute.",
+    proof:
+      "At Tive, I introduced a shared operating model that gave a senior, distributed team consistent points of alignment across web, mobile, and connected hardware.",
+  },
+  {
+    title: "Develop autonomous designers",
+    sentence: "I coach designers to own their decisions, not wait for mine.",
+    proof:
+      "Leading a team of three senior designers at Tive, I've focused on strengthening critique and validation practices so ownership sits with the team.",
+  },
+  {
+    title: "Build reusable foundations",
+    sentence:
+      "I build systems that let teams move faster without me in the room.",
+    proof:
+      "The Mode Design System I led at Stitch Fix scaled to 100+ product partners across 16 customer-facing teams.",
+  },
+  {
+    title: "Connect design decisions to delivery",
+    sentence:
+      "I stay close enough to engineering that design intent actually ships.",
+    proof:
+      "As a hybrid design engineer, I've built production UI myself and partnered directly with engineering to carry decisions through to release.",
+  },
+];
+---
+
+<ul class="principles">
+  {principles.map((p, i) => (
+    <li class="principle">
+      <span class="principle-index" aria-hidden="true">0{i + 1}</span>
+      <div class="principle-content">
+        <h3>{p.title}</h3>
+        <p class="principle-sentence">{p.sentence}</p>
+        <p class="principle-proof">{p.proof}</p>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style lang="scss">
+  .principles {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l);
+
+    @media screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .principle {
+    display: flex;
+    gap: var(--space-s);
+    align-items: flex-start;
+  }
+
+  .principle-index {
+    font: var(--font-heading-2);
+    font-family: var(--secondary-font-family);
+    color: var(--color-vibrant-dark);
+    opacity: 0.6;
+    flex: 0 0 auto;
+    line-height: 1;
+  }
+
+  .principle-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+  }
+
+  .principle-content h3 {
+    font: var(--font-heading-4);
+  }
+
+  .principle-sentence {
+    font: var(--font-body-3);
+  }
+
+  .principle-proof {
+    font: var(--font-body-4);
+    color: var(--color-secondary);
+  }
+</style>
