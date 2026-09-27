@@ -3,12 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import LinkButton from "../components/LinkButton.astro";
 import TopNav from "../components/TopNav.astro";
 // import Accomplishments from "../components/Accomplishments.astro";
-import MyStory from "../components/MyStory.astro";
 import MyWork from "../components/MyWork.astro";
-import HowILead from "../components/HowILead.astro";
 import SelectedImpact from "../components/SelectedImpact.astro";
-import CareerPath from "../components/CareerPath.astro";
-import AboutMe from "../components/AboutMe.astro";
 import Contact from "../components/Contact.astro";
 
 const mhUrl = "https://www.modernhealth.com/";
@@ -92,26 +88,9 @@ const mediumUrl = "https://medium.com/@yorthehunter"
       <h2 class="heading-3">Leadership Work</h2>
       <MyWork />
     </article>
-    <article class="content-section" id="how-i-lead">
-      <h2 class="heading-3">How I Lead</h2>
-      <HowILead />
-    </article>
     <article class="content-section" id="selected-impact">
       <h2 class="heading-3">Selected Impact</h2>
       <SelectedImpact />
-    </article>
-    <article class="content-section" id="career-path">
-      <h2 class="heading-3">Career Path</h2>
-      <CareerPath />
-    </article>
-    <article class="content-section" id="about-me">
-      <h2 class="heading-3">About Me</h2>
-      <AboutMe>
-        <article class="content-section" id="reach-out" slot="aboutMe">
-          <h3 class="heading-4">My Design Journey</h3>
-          <MyStory />
-        </article>
-      </AboutMe>
     </article>
     <article class="content-section" id="reach-out">
       <h2 class="heading-3">Reach Out</h2>
@@ -127,96 +106,3 @@ const mediumUrl = "https://medium.com/@yorthehunter"
     </footer>
   </main>
 </Layout>
-
-<style>
-  .content-section {
-    display: flex;
-    padding: var(--space-xl) var(--space-s);
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2.5rem;
-    align-self: stretch;
-    max-width: 70.5rem;
-    margin: auto;
-  }
-
-  .heading-1 {
-    font: var(--font-heading-1);
-  }
-
-  .heading-2 {
-    font: var(--font-heading-2);
-  }
-
-  .heading-3 {
-    font: var(--font-heading-3);
-  }
-
-  .heading-4 {
-    font: var(--font-heading-4);
-  }
-
-  .body-1 {
-    font: var(--font-body-1);
-  }
-
-  .body-2 {
-    font: var(--font-body-2);
-  }
-
-  .body-3 {
-    font: var(--font-body-3);
-  }
-
-  .body-4 {
-    font: var(--font-body-4);
-  }
-  .navigation-list > ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-2xs);
-  }
-
-  .navigation-list li {
-    display: flex;
-  }
-
-  @media only screen and (max-width: 380px) {
-    .navigation-list > ul {
-      flex-direction: column;
-    }
-  }
-  .all-caps {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .soft {
-    color: var(--color-secondary);
-  }
-
-  .eyebrow {
-    font: var(--font-body-4);
-    margin-bottom: -1.5rem;
-  }
-
-  .credibility-strip {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: var(--space-2xs);
-    row-gap: var(--space-3xs);
-  }
-
-  footer {
-    border-top: 3px solid var(--color-vibrant);
-
-    > p {
-      padding: var(--space-xl) var(--space-s);
-      max-width: 70.5rem;
-      margin: auto;
-      font: var(--font-body-4);
-    }
-  }
-</style>
