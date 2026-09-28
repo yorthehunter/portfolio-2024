@@ -4,6 +4,8 @@ import LinkButton from "../components/LinkButton.astro";
 import modeDS from "../assets/images/sample-sf-mode.png";
 import returnsProcess from "../assets/images/sample-sf-returns.png";
 
+const base = import.meta.env.BASE_URL;
+
 const featuredStories = [
   {
     tags: ["Team leadership", "Operating model", "Enterprise platform"],
@@ -12,6 +14,10 @@ const featuredStories = [
       "How I increased ownership across a senior design team while introducing stronger discovery, critique, validation, and shared product foundations.",
     proves: "I can inherit and lead a platform design team.",
     image: null,
+    cta: {
+      label: "Read the Case Study",
+      href: `${base}/design-leadership-at-Tive.html`,
+    },
   },
   {
     tags: ["Design systems", "Governance", "Design engineering"],
