@@ -16,7 +16,8 @@ const featuredStories = [
     image: null,
     cta: {
       label: "Read the Case Study",
-      href: `${base}/design-leadership-at-Tive.html`,
+      href: `${base}/work/tive`,
+      newWindow: false,
     },
   },
   {
@@ -78,7 +79,11 @@ const featuredStories = [
         <p class="story-summary">{story.summary}</p>
         <blockquote class="story-proves">{story.proves}</blockquote>
         {story.cta && (
-          <LinkButton newWindow label={story.cta.label} href={story.cta.href} />
+          <LinkButton
+            newWindow={story.cta.newWindow ?? true}
+            label={story.cta.label}
+            href={story.cta.href}
+          />
         )}
       </div>
     </article>
