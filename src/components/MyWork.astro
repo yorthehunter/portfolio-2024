@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import LinkButton from "../components/LinkButton.astro";
-import modeDS from "../assets/images/sample-sf-mode-panel.png";
+import modeDS from "../assets/images/sample-sf-mode.png";
 import returnsProcess from "../assets/images/sample-sf-returns.png";
 
 const featuredStories = [
@@ -20,7 +20,6 @@ const featuredStories = [
       "Helped grow adoption across 100+ product partners and 16 customer-facing teams through system architecture and design-engineering partnership.",
     proves: "I create organizational leverage, not just components.",
     image: modeDS,
-    fit: "contain",
     cta: {
       label: "Read on Medium",
       href: "https://yorthehunter.medium.com/introducing-the-mode-design-system-b3a64cb916da?sk=7450450ef476290ea72991dc0c0110c8",
@@ -56,7 +55,7 @@ const featuredStories = [
           <Image
             src={story.image}
             alt=""
-            class:list={["story-image", story.fit === "contain" && "contain"]}
+            class="story-image"
             loading="lazy"
           />
         ) : (
@@ -120,10 +119,6 @@ const featuredStories = [
     height: 100%;
     object-fit: cover;
     display: block;
-
-    &.contain {
-      object-fit: contain;
-    }
   }
 
   .story-placeholder {
